@@ -10,7 +10,14 @@ export default {
 		async function deleteFiles() {
 			const pb = new PocketBase('https://api.moveto.kr');
 			const loginAdmin = await pb.admins.authWithPassword(env.ADMIN_EMAIL, env.ADMIN_PASSWORD);
-			if (!loginAdmin) return new Response('Admin Auth Error');
+			if (!loginAdmin) {
+				const json = JSON.stringify({ message: 'auth error' }, null, 2);
+				return new Response(json, {
+					headers: {
+						'content-type': 'application/json;charset=UTF-8',
+					},
+				});
+			}
 
 			const records = await pb.collection('files').getFullList({ expand: 'user' });
 			const currentTime = new Date();
