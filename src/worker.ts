@@ -18,7 +18,7 @@ export default {
 			let deletedFile = [];
 
 			for (let i = 0; i < records.length; i += 1) {
-				if (records[i].files.length > 0) {
+				if (records[i].files.length > 0 || records[i].link) {
 					let downloadTime = 5 * 60000;
 					const userInfo = records[i].expand.user;
 					if (userInfo !== undefined) {
