@@ -6,6 +6,9 @@ compatibility_date = "2023-07-17"
 ADMIN_EMAIL="jhyunwoo0228@gmail.com"
 ADMIN_PASSWORD="POC*gksrnr105"
 
+[triggers]
+crons = ["*/5 * * * *"]
+
 # Variable bindings. These are arbitrary, plaintext strings (similar to environment variables)
 # Note: Use secrets to store sensitive data.
 # Docs: https://developers.cloudflare.com/workers/platform/environment-variables
