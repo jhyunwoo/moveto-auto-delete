@@ -3,8 +3,9 @@ main = "src/worker.ts"
 compatibility_date = "2023-07-17"
 
 [vars]
-ADMIN_EMAIL="jhyunwoo0228@gmail.com"
-ADMIN_PASSWORD="POC*gksrnr105"
+CLOUDFLARE_ACCOUNT_ID="5016d9ed18d25af3e51bd9f3ec8e20df"
+R2_ACCESSKEY="419a167ec9344d98c9e447f5f303df27"
+R2_PRIVITEKEY="1e39b6356ce30bc182eb2cb63027e4f8bbd0da8e999cd8282c3a56a4472cf969"
 
 [triggers]
 crons = ["*/5 * * * *"]
